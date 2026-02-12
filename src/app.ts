@@ -8,6 +8,9 @@ import routes from './routes';
 
 const app = express();
 
+// Trust proxy para Railway
+app.set('trust proxy', 1);
+
 // Middlewares de segurança
 app.use(helmet());
 app.use(cors(corsOptions));
